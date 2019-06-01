@@ -15,9 +15,10 @@ __Functionnal programming__
 #### Terminology
 
 * _sequential programming_ : accomplishing things in step
-... * e.g : for the each person in line, the barrista is sequentially repeating the same set of instructions (grind coffee, brew coffee, steam milk, froth milk, and combine the coffee, and the milk to make a cappucino
-... * convenience : a clear set of systematic instructions of what to do and when to do
-... * inconvenience : the barista can when during a task
+... * e.g : for the each person in line, the barrista is sequentially repeating the same set of instructions (grind coffee, brew coffee, steam milk, froth milk, and combine the coffee, and the milk to make a cappucino  
+... * convenience : a clear set of systematic instructions of what to do and when to do  
+... * inconvenience : the barista can when during a task  
+
   
   
 
