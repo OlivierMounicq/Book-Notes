@@ -8,6 +8,12 @@ __Functionnal programming__
 * _stateless_ : the output only depends upon input and not the state of the program at execution time  
 * _expression_ : the functional programming treats computation as the evaluation of expressions.  
 
+The main feature of the functional programming
+* Immutability : removes the memory corruption  
+* pure function : stateless function. A function always returns the same value for the same input parameters.  
+* referential transparency :
+* lazy evaluation
+* composability : 
 
 
 * Before 2005 : single-core CPU
@@ -36,8 +42,8 @@ __Race condition__
 * Performance decline is a common problem when multiple threads contention that require synchronization.
 
 
-__Divide and Conquer algorith__
-! the multithreading applied to the _Quicksort_ algorithm could lead to worse performance => over-parallelization
+__Divide and Conquer algorithm__  
+! the multithreading applied to the _Quicksort_ algorithm (using a recursive function) could lead to worse performance => over-parallelization
 
 
 
