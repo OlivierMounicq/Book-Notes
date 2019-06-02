@@ -54,6 +54,7 @@ static Func<T,R> Memoize<T,R>(Func<T,R> func)
 }
 ```
 
+__Beware__ : the dictionary is unbounded : the items are only added never removed. To avoid the memory size issue, you can use the collection ```cs ConditionalWeakDictionary ``` to add an automatic mechanism to remove the items for which the kay has been removing by the GC.
 
 
 ### The libraries
