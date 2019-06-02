@@ -6,6 +6,7 @@ __Functionnal programming__
 * abstraction + computation
 * avoiding the mutation of the data
 * _stateless_ : the output only depends upon input and not the state of the program at execution time
+* _expression_ : the functional programming treats computation as the evaluation of expressions.
 
 
 
@@ -20,8 +21,12 @@ __Functionnal programming__
     * inconvenience : the barista can when during a task
 * _concurrent programming_ : _it handles several operations at one time and does not require hardware support._ (running multiple tasks at the same time.) _Concurrency_ describes the ability to run several programs at the same time.
     * e.g : the barrista switches between the preparation of the coffee and preparing the milk.
-* _parallel programming_ : executinh multiples tasks simultaneously. It achieves only in multicore devices. The goal is to maximize the use of all available computational resources.
+* _parallel programming_ : executing multiples tasks simultaneously on several CPU. It achieves only in multicore devices. The goal is to maximize the use of all available computational resources.
     * e.g : one barrista prepares the coffee and another one prepares the milk
+* _multitasking_ : concurrently performs multiple threads from different processes.
+* _multithreading_ : extends the multitaskings concept for only one process.
+
+
     
 
   
