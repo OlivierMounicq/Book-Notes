@@ -18,7 +18,8 @@ __Functionnal programming__
     * e.g : for the each person in line, the barrista is sequentially repeating the same set of instructions (grind coffee, brew coffee, steam milk, froth milk, and combine the coffee, and the milk to make a cappucino  
     * __*convenience*__ : a clear set of systematic instructions of what to do and when to do  
     * inconvenience : the barista can when during a task
-* _concurrent programming_
+* _concurrent programming_ : running multiple tasks at the same time. _Concurrency_ describes the ability to run several programs at the same time.
+    * e.g : the barrista switches between the preparation of the coffee and preparing the milk.
 
   
   
