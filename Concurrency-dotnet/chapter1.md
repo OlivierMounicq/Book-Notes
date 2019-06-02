@@ -20,6 +20,16 @@ The main feature of the functional programming
 * Before 2005 : single-core CPU
 * A CPU single core performances stagnate
 
+### 2. The functional programming concept
+
+#### 2.1 The function composition
+
+```csharp
+static Func<A,> Compose<A,B,C>(this func<A,B> f, Func<B,C> g) 
+    => (n) => g(f(n));
+```    
+
+
 ### The libraries
 - Reactive Extension
 - TPL (Microsoft)
