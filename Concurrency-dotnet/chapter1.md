@@ -28,6 +28,18 @@ __Functionnal programming__
 
 
     
+__Mutual exclusion__
+* lock => but it can lead to deadlock!
+
+__Race condition__
+* Race condition is a state that occurs when a shared mutable resource is accessed at the same time by multiple theads, leaving an inconsistent state.  
+* Performance decline is a common problem when multiple threads contention that require synchronization.
+
+
+__Divide and Conquer algorith__
+! the multithreading applied to the _Quicksort_ algorithm could lead to worse performance => over-parallelization
+
+
 
   
   
