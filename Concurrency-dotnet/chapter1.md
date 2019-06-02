@@ -11,13 +11,18 @@ __Functionnal programming__
 The main feature of the functional programming
 * Immutability : removes the memory corruption  
 * pure function : stateless function. A function always returns the same value for the same input parameters.  
-* referential transparency :
+* referential transparency : the returned value does not depend of the current state of other variables. To get the output value, you need the input parameters and the mapping between input paramater and output.
 * lazy evaluation
 * composability : 
 
 
 * Before 2005 : single-core CPU
 * A CPU single core performances stagnate
+
+### The libraries
+- Reactive Extension
+- TPL (Microsoft)
+- Intel's Threading Building Blocks (TBB°
 
 #### Terminology
 
