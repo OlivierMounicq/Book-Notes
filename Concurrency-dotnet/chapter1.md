@@ -51,8 +51,6 @@ static Func<T,R> Memoize<T,R>(Func<T,R> func)
             return cache(arg);
         return (cache[arg] = func(arg));    
     };
-
-
 }
 ```
 
