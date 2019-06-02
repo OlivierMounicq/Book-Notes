@@ -14,6 +14,7 @@ The main feature of the functional programming
 * referential transparency : the returned value does not depend of the current state of other variables. To get the output value, you need the input parameters and the mapping between input paramater and output.
 * lazy evaluation : the result is retrieved on-demand
 * composability : you create higher-level abstraction by using simpler functions.
+* null value not authorized 
 
 
 * Before 2005 : single-core CPU
