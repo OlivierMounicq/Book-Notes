@@ -29,6 +29,34 @@ static Func<A,> Compose<A,B,C>(this func<A,B> f, Func<B,C> g)
     => (n) => g(f(n));
 ```    
 
+#### 2.2 The closure
+
+The _closures_ are a more convenient way to five functions access to a local state ad to pass data into background operations.
+
+#### 2.3 The captured variable
+
+
+#### 2.4 The memoization-cache
+
+The goal is to store all results and their inputs in a cache to avoid to recompute each time the output value.
+
+```csharp
+static Func<T,R> Memoize<T,R>(Func<T,R> func)
+   where T : IComparable
+{
+    Dictionary<T,R> cache = new Dictionary<T,R>();
+    
+    return arg => {
+        if(cache.ContainsKey(arg))
+            return cache(arg);
+        return (cache[arg] = func(arg));    
+    };
+
+
+}
+```
+
+
 
 ### The libraries
 - Reactive Extension
