@@ -179,10 +179,48 @@ public sealed class Singleton
 }
 ```
 
-
-
-
 #### 5 The speculative computation
+
+The speculative computation is performed before the actual algorithm and as soon as all the inputs of function are available.
+
+__The goal__ : to amortize the cost of expensive computation and improve the performance.
+
+__remark__ : this technic uses the closure to keep the result of the precompuation.
+
+
+Each time you want to call this function, you have
+- to get all parameters
+- and wait the result of _DoSomethingForLongWhile_
+
+```csharp
+public static T DoSomething(R param1, S param2)
+{
+    var privateVar = DoSomethingForLongWhile(param1);
+    
+    return ComputeResult(privateVar, param2);
+}
+```
+
+If you call several time the method DoSomething with the same value of param1, the privateVar is recomputed each time.
+
+The better solution:
+
+```csharp
+public static Func<R,T> DoPartialSomething(R param1)
+{
+    var privateVar = DoSomethingForLongWhile(param1);
+    
+    return ComputeResult(privateVar, param2);
+}
+
+Func<S,T> fastComputation = DoPartialSomething(paramOne);
+
+T result1 = fastComputation(paramTwo);
+```
+
+
+
+
 
 
 
