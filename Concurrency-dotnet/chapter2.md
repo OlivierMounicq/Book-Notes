@@ -43,6 +43,23 @@ Func<string,string> lambda = value => closureVar + " " + value;
 
 ```    
 
+
+###### 2.2 The closure with the lambda expression in the multithreading context
+
+In FP, closures are commonly used to manage mutable state to limit and isolate the scope of mutable structures, allowing thread-safe access.  
+But to use the closure can lead to problem : 
+
+
+```csharp
+for(var i =0; i < 10; i++)
+{
+    Task.Factory.StartNew(() => Console.Writeline($"{i}");
+}
+```
+
+But the output won't be equal to 0,1,2,3,4,5,6,7,8,9. Some threads can capture the same value.
+
+
 #### 3 The captured variables in closure with lambda expression
 
 
