@@ -10,8 +10,8 @@ Func <R,S> firstFunction = var1 => return doSometing(var1);
 
 Func<S,T> secondFunction = var2 => return doOtherThing(var2);
 
-var var2 = firstFunction(var1);
-var result = secondFunction(var2);
+S var2 = firstFunction(var1);
+T result = secondFunction(var2);
 
 //Or
 
@@ -26,8 +26,9 @@ static Func<R,T> Compose<R,S,T>(this func<R,S> firstFunction, Func<S,T> secondFu
     => (n) => secondFunction(firstFunction(n));
     
 //And then:
-
-
+Func<R,T> doEverything = firstFunction.Compose(secondFunction);
+R var1 = ....;
+T result = doEverything(var1);
 ```
 
 
