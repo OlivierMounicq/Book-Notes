@@ -34,6 +34,8 @@ T result = doEverything(var1);
 
 #### 2 The closure
 
+##### 2.1 The purpose
+
 The _closures_ are a more convenient way to five functions access to a local state ad to pass data into background operations.
 
 ```csharp
@@ -44,7 +46,7 @@ Func<string,string> lambda = value => closureVar + " " + value;
 ```    
 
 
-###### 2.2 The closure with the lambda expression in the multithreading context
+##### 2.2 The closure with the lambda expression in the multithreading context
 
 In FP, closures are commonly used to manage mutable state to limit and isolate the scope of mutable structures, allowing thread-safe access.  
 But to use the closure can lead to problem : 
@@ -60,12 +62,7 @@ for(var i =0; i < 10; i++)
 But the output won't be equal to 0,1,2,3,4,5,6,7,8,9. Some threads can capture the same value.
 
 
-#### 3 The captured variables in closure with lambda expression
-
-
-
-
-#### 4 The memoization-cache
+#### 3 The memoization-cache
 
 The goal is to store all results and their inputs in a cache to avoid to recompute each time the output value.
 
