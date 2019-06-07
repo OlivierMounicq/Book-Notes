@@ -82,3 +82,111 @@ static Func<T,R> Memoize<T,R>(Func<T,R> func)
 
 __Beware__ : the dictionary is unbounded : the items are only added never removed. To avoid the memory size issue, you can use the collection ``` ConditionalWeakDictionary ``` to add an automatic mechanism to remove the items for which the key has been removing by the GC.
 
+
+#### 4 Lazy computation
+
+##### 4.2 Lazy evaluation
+
+Lazy evaluation : defering the evaluation until the last possible moment when it's accessed.
+
+```Lazy<T>``` gives you the guarantée of full thread safety, regardless of the implementation of the function and ensures a single evaluation of the function
+
+##### 4.2 Lazy evaluation vs eager evaluation 
+
+- eager evaluation : strict evaluation (the expression is evaluated immediately)
+- lazy evaluation : 
+
+##### 4.3 Lazy evaluation and singleton
+
+##### 4.3.1 Tread safe singleton
+
+```csharp
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+    private static readonly object lockObj = new object();
+    
+    private Singleton()
+    {
+        //....
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            lock(lockObj)
+            {
+                if(instance == null)
+                {
+                    instance = new Singleton();
+                }
+                return instance;            
+            }        
+        }
+    }
+}
+```
+
+##### 4.3.2 Tread safe singleton with double check
+
+```csharp
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+    private static readonly object lockObj = new object();
+    
+    private Singleton()
+    {
+        //....
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if(instance == null)
+                {
+                lock(lockObj)
+                {
+                    if(instance == null)
+                    {
+                        instance = new Singleton();
+                    }                    
+                }            
+            }
+            return instance;
+        }
+    }
+}
+```
+
+
+##### 4.3.3 Tread safe singleton with Lazy<T>
+
+```csharp
+public sealed class Singleton
+{
+    private static readonly Lazy<Singleton> = new Lazy<Singleton>(() => new Singleton());
+    
+    public static Singleton Instance
+    {
+        get
+        {
+            return lazy.Value;
+        }
+    }    
+}
+```
+
+
+
+
+#### 5 The speculative computation
+
+
+
+
+
+
+
