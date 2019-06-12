@@ -1,8 +1,8 @@
-Thread contention
+## Chapter 3
+
+####  Thread contention
 
 A Thread contention is a condition where one thread is waiting for an object, being held by another thread, to be released.  The waiting thread cannot continue until the other thread releases the object (it’s locked).
-
-
 
 
 #### System.Collection.Immutable
