@@ -59,7 +59,7 @@ Any operations that change the data strctures don't modify the original instance
  | ConcurrentDictionary<K,V> | Generic dictionary implemented using a hash table | Lock free for read operations, lock synchronization for updates.
  
  - the collections create an internal snapshot that mimics a temporary immutability to preserve thread safety during their iteration, allowing the snapshot to be enumerated safety
- - Those collections work well with algorithms implementiing the producer/consummer pattern.
+ - Those collections work well with algorithms implementing the producer/consummer pattern.
  
  
  
