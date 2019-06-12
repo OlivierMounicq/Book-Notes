@@ -33,4 +33,30 @@ Any operations that change the data strctures don't modify the original instance
  | ImmutableQueue<T>                | Queue<T>                | 
   
   
+ ####  Compare-And-Swap (CAS)
+ 
+ The Compare-And-Swap operation is an atomic operation used in multithreaded programming.  
+ The CAS instruction modifies shared data without the need to acquire and release a lock.
+ 
+ - .NET method : ```Interlocked.CompareExchange```
+ 
+ the ultimate combo : CAS + immutable shared data (no ABA problem)!
+ 
+ 
+ #### The ImmutableInterlocked class
+ 
+ You can use it to perform CAS operations on immutable collections.
+ 
+ - namespace : System.Collections.Immutable
+ 
+ #### Concurrent collection
+ 
+ | Concurrent collection | Implementation details | Synchronization techniques |
+ |-----------------------|------------------------|----------------------------|
+ | ConcurrentBag<T>      | Works like a generic list | If multiple threadq are detected, a primitive monitor coordinates their access =; otherwise the synchronization is avoided. |
+ | ConcurrentStack<T>    | Generic stack implemented using a singly linked list | lock free using CAS technique |
+ 
+ 
+ 
+ 
  
