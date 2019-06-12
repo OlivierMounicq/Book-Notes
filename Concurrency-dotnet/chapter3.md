@@ -53,8 +53,11 @@ Any operations that change the data strctures don't modify the original instance
  
  | Concurrent collection | Implementation details | Synchronization techniques |
  |-----------------------|------------------------|----------------------------|
- | ConcurrentBag<T>      | Works like a generic list | If multiple threadq are detected, a primitive monitor coordinates their access =; otherwise the synchronization is avoided. |
+ | ConcurrentBag<T>      | Works like a generic list | If multiple threads are detected, a primitive monitor coordinates their access =; otherwise the synchronization is avoided. |
  | ConcurrentStack<T>    | Generic stack implemented using a singly linked list | lock free using CAS technique |
+ | ConcurrentQueue<T>    | Generic queue implemented using a linked list of array segments | Lock free using CAS technique |
+ | ConcurrentDictionary<K,V> | Generic dictionary implemented using a hash table | Lock free for read operations, lock synchronization for updates.
+ 
  
  
  
